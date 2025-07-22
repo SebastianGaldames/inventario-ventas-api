@@ -46,7 +46,30 @@ La base de datos utilizada es **MongoDB**, accedida mediante **Mongoose**.
    PORT=3000
    ```
 
-## Uso
+## Uso con Docker
+
+Puedes levantar todo el entorno (API y base de datos MongoDB) fácilmente usando Docker y docker-compose. Esto es ideal para desarrollo o pruebas rápidas.
+
+### Levantar los servicios
+
+```bash
+docker-compose up --build
+```
+
+Esto iniciará dos servicios:
+
+- **mongo:** Base de datos MongoDB, expuesta en el puerto 27017.
+- **app:** La API de NestJS, expuesta en el puerto 3000.
+
+La API estará disponible en `http://localhost:3000` y la base de datos en `mongodb://localhost:27017`.
+
+Para detener los servicios:
+
+```bash
+docker-compose down
+```
+
+## Uso manual (sin Docker)
 
 ### Desarrollo
 
